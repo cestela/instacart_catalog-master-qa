@@ -10,6 +10,8 @@ class Test_ErrorSessionCookie:
     sessionCookie = ReadConfig.getIncorrectValue()
     actionCatalog = "Retrieve catalog"
     actionBasicInfo = "Retrieve basic info"
+    error_500 = "Can't find basic info in the response HTML. Are you sure you're using a valid session token?"
+    error_401 = "Response http code 401 != 200. Are you sure you are using a valid session token?"
     logger = LogGen.loggen()
 
     @pytest.mark.regression
@@ -23,7 +25,7 @@ class Test_ErrorSessionCookie:
         self.instacartCrawler.setAction(self.actionBasicInfo)
         self.instacartCrawler.clickButton()
         actual_bodyText = self.driver.find_element_by_xpath("/html/body").text
-        if actual_bodyText == "Can't find basic info in the response HTML. Are you sure you're using a valid session token?":
+        if actual_bodyText == self.error_500:
             self.driver.close()
             self.logger.info("***************** Null Session Cookie (Basic Info) Test - PASSED *****************")
             assert True
@@ -45,7 +47,7 @@ class Test_ErrorSessionCookie:
         self.instacartCrawler.setAction(self.actionBasicInfo)
         self.instacartCrawler.clickButton()
         actual_bodyText = self.driver.find_element_by_xpath("/html/body").text
-        if actual_bodyText == "Can't find basic info in the response HTML. Are you sure you're using a valid session token?":
+        if actual_bodyText == self.error_500:
             self.driver.close()
             self.logger.info("***************** Incorrect Session Cookie (Basic Info) Test - PASSED *****************")
             assert True
@@ -66,7 +68,7 @@ class Test_ErrorSessionCookie:
         self.instacartCrawler.setAction(self.actionCatalog)
         self.instacartCrawler.clickButton()
         actual_bodyText = self.driver.find_element_by_xpath("/html/body").text
-        if actual_bodyText == "Response http code 401 != 200. Are you sure you are using a valid session token?":
+        if actual_bodyText == self.error_401:
             self.driver.close()
             self.logger.info("***************** Null Session Cookie (Catalog) Test - PASSED *****************")
             assert True
@@ -88,7 +90,7 @@ class Test_ErrorSessionCookie:
         self.instacartCrawler.setAction(self.actionCatalog)
         self.instacartCrawler.clickButton()
         actual_bodyText = self.driver.find_element_by_xpath("/html/body").text
-        if actual_bodyText == "Response http code 401 != 200. Are you sure you are using a valid session token?":
+        if actual_bodyText == self.error_401:
             self.driver.close()
             self.logger.info("***************** Incorrect Session Cookie (Catalog) Test - PASSED *****************")
             assert True
