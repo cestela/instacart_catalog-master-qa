@@ -1,19 +1,13 @@
 import pytest
-from selenium import webdriver
-from selenium.common.exceptions import NoSuchElementException
-
 from pageObjects.MainPage import InstacartCrawler
 from utilities.readProperties import ReadConfig
 from utilities.customLogger import LogGen
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.common.by import By
 
 
 class Test_ErrorSessionCookie:
     baseURL = ReadConfig.getApplicationURL()
     store = ReadConfig.getStore()
-    sessionCookieIncorrect = "QATEST"
+    sessionCookie = ReadConfig.getIncorrectValue()
     actionCatalog = "Retrieve catalog"
     actionBasicInfo = "Retrieve basic info"
     logger = LogGen.loggen()
@@ -46,7 +40,7 @@ class Test_ErrorSessionCookie:
         self.driver = setup
         self.driver.get(self.baseURL)
         self.instacartCrawler = InstacartCrawler(self.driver)
-        self.instacartCrawler.setSessionCookie(self.sessionCookieIncorrect)
+        self.instacartCrawler.setSessionCookie(self.sessionCookie)
         self.instacartCrawler.setStore(self.store)
         self.instacartCrawler.setAction(self.actionBasicInfo)
         self.instacartCrawler.clickButton()
@@ -89,7 +83,7 @@ class Test_ErrorSessionCookie:
         self.driver = setup
         self.driver.get(self.baseURL)
         self.instacartCrawler = InstacartCrawler(self.driver)
-        self.instacartCrawler.setSessionCookie(self.sessionCookieIncorrect)
+        self.instacartCrawler.setSessionCookie(self.sessionCookie)
         self.instacartCrawler.setStore(self.store)
         self.instacartCrawler.setAction(self.actionCatalog)
         self.instacartCrawler.clickButton()

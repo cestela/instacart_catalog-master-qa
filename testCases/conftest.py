@@ -6,16 +6,13 @@ import pytest
 def setup(browser):
     if browser == "chrome":
         driver = webdriver.Chrome()
-        print("Launching Chrome browser...")
     elif browser == "firefox":
         fp = webdriver.FirefoxProfile()
         fp.set_preference('devtools.jsonview.enabled', False) # This is important to prevent JSON formatting
         driver = webdriver.Firefox(fp)
-        print("Launching Firefox browser...")
     else:
         #Default browser needed in order to avoid errors when no parameter on CLI
         driver = webdriver.Chrome()
-        print("Launching Chrome browser...")
 
     return driver
 

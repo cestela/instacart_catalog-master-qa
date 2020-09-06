@@ -2,10 +2,9 @@
 
 Instacart Crawler QA is a testing automation project for the Instacart Crawler app. 
 
-This project is ready to be pushed to Git repository and to be integrated in a CI/CD pipeline
+This project is ready to be pushed to Git repository and to be integrated in a CI/CD pipeline.
 
 ## Project Structure
-
 
 ```bash
 .
@@ -58,6 +57,7 @@ pytest -v -s -m "regression" -n=3 --html=Reports/report_chrome.html --browser ch
 ```
 This parameter allows the test cases to be executed depending of the associated group. Possible values:
 * **"sanity"** : Basic set of test cases to ensure application is working.
+
 * **"regression"** : Set of test cases to ensure that previously developed and tested software still performs after a change.
 
 ```bash
@@ -73,4 +73,7 @@ This parameter allows the generation of a html report file in the Reports direct
 ```bash
 --browser chrome
 ```
-This parameter allows the user to choose on what webdriver should the test cases be executed.
+This parameter allows the user to choose on what webdriver should the test cases be executed.Possible values:
+* **chrome** : Executes chrome webdriver.
+
+* **firefox** : Executes fiefox webdriver.

@@ -17,3 +17,6 @@ class ReadConfig:
     def getStore():
         return config.get('basic info', 'store')
 
+    @staticmethod
+    def getIncorrectValue():
+        return config.get('basic info', 'qa')
