@@ -1,13 +1,8 @@
-allure-pytest==2.8.18
-allure-python-commons==2.8.18
 apipkg==1.5
 attrs==20.2.0
-et-xmlfile==1.0.1
 execnet==1.7.1
 iniconfig==1.0.1
-jdcal==1.4.1
 more-itertools==8.5.0
-openpyxl==3.0.5
 packaging==20.4
 pluggy==0.13.1
 py==1.9.0
