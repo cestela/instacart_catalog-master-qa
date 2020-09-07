@@ -1,0 +1,60 @@
+09/07/2020 09:42:25 AM: [INFO]: ----------------- TC_01_NullSessionCookie_BasicInfo -----------------
+09/07/2020 09:42:25 AM: [INFO]: ***************** Verifying Null Session Cookie for Basic Info action *****************
+09/07/2020 09:42:28 AM: [INFO]: ***************** Null Session Cookie (Basic Info) Test - PASSED *****************
+09/07/2020 09:42:30 AM: [INFO]: ----------------- TC_02_IncorrectSessionCookie_BasicInfo -----------------
+09/07/2020 09:42:30 AM: [INFO]: ***************** Verifying Incorrect Session Cookie for Basic Info action *****************
+09/07/2020 09:42:32 AM: [INFO]: ***************** Incorrect Session Cookie (Basic Info) Test - PASSED *****************
+09/07/2020 09:42:34 AM: [INFO]: ----------------- TC_03_NullSessionCookie_Catalog -----------------
+09/07/2020 09:42:34 AM: [INFO]: ***************** Verifying Null Session Cookie for Catalog action *****************
+09/07/2020 09:42:35 AM: [INFO]: ***************** Null Session Cookie (Catalog) Test - PASSED *****************
+09/07/2020 09:42:38 AM: [INFO]: ----------------- TC_04_IncorrectSessionCookie_Catalog -----------------
+09/07/2020 09:42:38 AM: [INFO]: ***************** Verifying Incorrect Session Cookie for Catalog action *****************
+09/07/2020 09:42:39 AM: [INFO]: ***************** Incorrect Session Cookie (Catalog) Test - PASSED *****************
+09/07/2020 09:42:41 AM: [INFO]: ----------------- TC_05_NullStore_BasicInfo -----------------
+09/07/2020 09:42:41 AM: [INFO]: ***************** Verifying Null Store for Basic Info action *****************
+09/07/2020 09:42:45 AM: [INFO]: ***************** Null Store (Basic Info) Test - PASSED *****************
+09/07/2020 09:42:47 AM: [INFO]: ----------------- TC_06__IncorrectStore_BasicInfo -----------------
+09/07/2020 09:42:47 AM: [INFO]: ***************** Verifying Incorrect Store for Basic Info action *****************
+09/07/2020 09:42:50 AM: [INFO]: ***************** Incorrect Store (Basic Info) Test - PASSED *****************
+09/07/2020 09:42:53 AM: [INFO]: ----------------- TC_11_NullStore_Catalog -----------------
+09/07/2020 09:42:53 AM: [INFO]: ***************** Verifying Null Store for Catalog action *****************
+09/07/2020 09:42:55 AM: [INFO]: ***************** Null Store (Catalog) Test - PASSED *****************
+09/07/2020 09:42:58 AM: [INFO]: ----------------- TC_12_IncorrectStore_Catalog -----------------
+09/07/2020 09:42:58 AM: [INFO]: ***************** Verifying Incorrect Store for Catalog action *****************
+09/07/2020 09:43:00 AM: [INFO]: ***************** Incorrect Store (Catalog) Test - PASSED *****************
+09/07/2020 09:43:02 AM: [INFO]: ----------------- TC_08_CorrectBasicInfo -----------------
+09/07/2020 09:43:02 AM: [INFO]: ***************** Verifying Correct Basic Info Retrieval *****************
+09/07/2020 09:43:06 AM: [INFO]: ***************** Correct Basic Info Retrieval Test - PASSED *****************
+09/07/2020 09:43:08 AM: [INFO]: ----------------- TC_09_CorrectCatalog -----------------
+09/07/2020 09:43:08 AM: [INFO]: ***************** Verifying Correct Catalog Retrieval *****************
+09/07/2020 09:43:14 AM: [INFO]: ***************** Correct Catalog Retrieval Test - PASSED *****************
+09/07/2020 09:43:21 AM: [INFO]: ----------------- TC_01_NullSessionCookie_BasicInfo -----------------
+09/07/2020 09:43:21 AM: [INFO]: ***************** Verifying Null Session Cookie for Basic Info action *****************
+09/07/2020 09:43:24 AM: [INFO]: ***************** Null Session Cookie (Basic Info) Test - PASSED *****************
+09/07/2020 09:43:28 AM: [INFO]: ----------------- TC_02_IncorrectSessionCookie_BasicInfo -----------------
+09/07/2020 09:43:28 AM: [INFO]: ***************** Verifying Incorrect Session Cookie for Basic Info action *****************
+09/07/2020 09:43:30 AM: [INFO]: ***************** Incorrect Session Cookie (Basic Info) Test - PASSED *****************
+09/07/2020 09:43:34 AM: [INFO]: ----------------- TC_03_NullSessionCookie_Catalog -----------------
+09/07/2020 09:43:34 AM: [INFO]: ***************** Verifying Null Session Cookie for Catalog action *****************
+09/07/2020 09:43:36 AM: [INFO]: ***************** Null Session Cookie (Catalog) Test - PASSED *****************
+09/07/2020 09:43:41 AM: [INFO]: ----------------- TC_04_IncorrectSessionCookie_Catalog -----------------
+09/07/2020 09:43:41 AM: [INFO]: ***************** Verifying Incorrect Session Cookie for Catalog action *****************
+09/07/2020 09:43:43 AM: [INFO]: ***************** Incorrect Session Cookie (Catalog) Test - PASSED *****************
+09/07/2020 09:43:47 AM: [INFO]: ----------------- TC_05_NullStore_BasicInfo -----------------
+09/07/2020 09:43:47 AM: [INFO]: ***************** Verifying Null Store for Basic Info action *****************
+09/07/2020 09:43:51 AM: [INFO]: ***************** Null Store (Basic Info) Test - PASSED *****************
+09/07/2020 09:43:55 AM: [INFO]: ----------------- TC_06__IncorrectStore_BasicInfo -----------------
+09/07/2020 09:43:55 AM: [INFO]: ***************** Verifying Incorrect Store for Basic Info action *****************
+09/07/2020 09:43:58 AM: [INFO]: ***************** Incorrect Store (Basic Info) Test - PASSED *****************
+09/07/2020 09:44:02 AM: [INFO]: ----------------- TC_11_NullStore_Catalog -----------------
+09/07/2020 09:44:02 AM: [INFO]: ***************** Verifying Null Store for Catalog action *****************
+09/07/2020 09:44:05 AM: [INFO]: ***************** Null Store (Catalog) Test - PASSED *****************
+09/07/2020 09:44:09 AM: [INFO]: ----------------- TC_12_IncorrectStore_Catalog -----------------
+09/07/2020 09:44:09 AM: [INFO]: ***************** Verifying Incorrect Store for Catalog action *****************
+09/07/2020 09:44:12 AM: [INFO]: ***************** Incorrect Store (Catalog) Test - PASSED *****************
+09/07/2020 09:44:16 AM: [INFO]: ----------------- TC_08_CorrectBasicInfo -----------------
+09/07/2020 09:44:16 AM: [INFO]: ***************** Verifying Correct Basic Info Retrieval *****************
+09/07/2020 09:44:21 AM: [INFO]: ***************** Correct Basic Info Retrieval Test - PASSED *****************
+09/07/2020 09:44:25 AM: [INFO]: ----------------- TC_09_CorrectCatalog -----------------
+09/07/2020 09:44:25 AM: [INFO]: ***************** Verifying Correct Catalog Retrieval *****************
+09/07/2020 09:44:32 AM: [INFO]: ***************** Correct Catalog Retrieval Test - PASSED *****************
