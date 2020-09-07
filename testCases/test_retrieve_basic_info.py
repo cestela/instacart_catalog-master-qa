@@ -5,27 +5,25 @@ from utilities.customLogger import LogGen
 
 
 class Test_CorrectBasicInfoRetrieval:
-
-    baseURL = ReadConfig.getApplicationURL()
+    base_url = ReadConfig.getApplicationURL()
     store = ReadConfig.getStore()
-    sessionCookie = ReadConfig.getSessionCookie()
+    session_cookie = ReadConfig.getSessionCookie()
     action = "Retrieve basic info"
-    expected_bodyText = ['Wegmans',
-                         'https://d2d8wwwkmhfcva.cloudfront.net/156x/d2lnr5mha7bycj.cloudfront.net/warehouse/logo/231/6347ea31-64ed-43c4-991b-7433b2d74bda.png']
+    expected_body_text = ['Wegmans',
+                          'https://d2d8wwwkmhfcva.cloudfront.net/156x/d2lnr5mha7bycj.cloudfront.net/warehouse/logo/231'
+                          '/6347ea31-64ed-43c4-991b-7433b2d74bda.png']
     logger = LogGen.loggen()
-
 
     @pytest.mark.sanity
     @pytest.mark.regression
-    def test_correctBasicInfo(self,setup):
+    def test_correct_basicinfo(self, setup):
         self.logger.info("----------------- TC_08_CorrectBasicInfo -----------------")
         self.logger.info("***************** Verifying Correct Basic Info Retrieval *****************")
-        self.execute_instacartCrawler(setup)
-        self.assert_result()
+        actual_body_text = self.load_body(setup, self.session_cookie, self.store, self.action)
+        self.assert_result(actual_body_text)
 
-    def assert_result(self):
-        actual_bodyText = self.driver.find_element_by_xpath("/html/body/pre").text
-        if all(x in actual_bodyText for x in self.expected_bodyText):
+    def assert_result(self, actual_body_text):
+        if all(x in actual_body_text for x in self.expected_body_text):
             self.driver.close()
             self.logger.info("***************** Correct Basic Info Retrieval Test - PASSED *****************")
             assert True
@@ -35,11 +33,16 @@ class Test_CorrectBasicInfoRetrieval:
             self.logger.error("***************** Correct Basic Info Retrieval Test - FAILED *****************")
             assert False
 
-    def execute_instacartCrawler(self, setup):
+    def load_body(self, setup, session_cookie=None, store=None, action=None):
         self.driver = setup
-        self.driver.get(self.baseURL)
+        self.driver.get(self.base_url)
         self.instacartCrawler = InstacartCrawler(self.driver)
-        self.instacartCrawler.setSessionCookie(self.sessionCookie)
-        self.instacartCrawler.setStore(self.store)
-        self.instacartCrawler.setAction(self.action)
+        if session_cookie is not None:
+            self.instacartCrawler.setSessionCookie(session_cookie)
+        if store is not None:
+            self.instacartCrawler.setStore(store)
+        if action is not None:
+            self.instacartCrawler.setAction(action)
         self.instacartCrawler.clickButton()
+        actual_body_text = self.driver.find_element_by_xpath("/html/body").text
+        return actual_body_text

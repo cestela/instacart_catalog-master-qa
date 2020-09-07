@@ -49,7 +49,7 @@ This project is ready to be pushed to Git repository and to be integrated in a C
  To run the tests you can either execute the `windowsRun.bat` / `unixRun.sh` (depending on the operating system) or execute the Pytest command on the terminal:
 
 ```bash
-pytest -v -s -m "regression" -n=3 --html=Reports/report_chrome.html --browser chrome
+pytest -v -s -m "regression" --html=Reports/report_chrome.html --browser chrome
 ```
 ### Params explained
 ```bash
@@ -59,11 +59,6 @@ This parameter allows the test cases to be executed depending of the associated 
 * **"sanity"** : Basic set of test cases to ensure application is working.
 
 * **"regression"** : Set of test cases to ensure that previously developed and tested software still performs after a change.
-
-```bash
--n=3
-```
-This parameter allows to establish multithreads for the parallelized execution of the tests. Increasing this amount may result in low performance.
 
 ```bash
 --html=Reports/report.html
@@ -77,3 +72,9 @@ This parameter allows the user to choose on what webdriver should the test cases
 * **chrome** : Executes chrome webdriver.
 
 * **firefox** : Executes fiefox webdriver.
+
+#### Optional parameter for multithreading
+```bash
+-n=3
+```
+This parameter allows to establish multithreads for the parallelized execution of the tests. Increasing this amount may result in low performance.
